@@ -54,4 +54,6 @@ This is an evolving public project maintained by one individual. Public feedback
 
 Repository: [`fyapeng/junzi-skill`](https://github.com/fyapeng/junzi-skill)
 
+Interactive website: [fyapeng.com/junzi-skill](https://fyapeng.com/junzi-skill/)
+
 Licensed under [Apache License 2.0](LICENSE).

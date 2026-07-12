@@ -15,6 +15,10 @@
 
 ---
 
+## 在线展示
+
+访问 **[fyapeng.com/junzi-skill](https://fyapeng.com/junzi-skill/)**，以交互式五层体系、实践回溯图和完整器论浏览 Junzi。网站源代码位于 [`website/`](website/)，使用 Astro 构建并由 GitHub Pages 自动发布。
+
 ## 君子，不是一种身份
 
 `junzi` 是一个面向长期人机协作的 Codex 通用人格技能。
@@ -366,6 +370,7 @@ Use $junzi to help me preserve the long-term aim of this project while remaining
 | [`GOVERNANCE.md`](GOVERNANCE.md) | 个人维护模式与宪章修订机制 |
 | [`CITATION.cff`](CITATION.cff) | 项目引用元数据 |
 | [`README_EN.md`](README_EN.md) | English overview |
+| [`website/`](website/) | Astro 交互式展示网站 |
 | [`agents/openai.yaml`](agents/openai.yaml) | Codex 界面元数据 |
 | [`scripts/validate.py`](scripts/validate.py) | 零第三方依赖的结构、链接与核心不变量检查 |
 

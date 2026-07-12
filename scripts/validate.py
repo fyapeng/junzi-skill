@@ -41,6 +41,12 @@ REQUIRED_FILES = [
     "GOVERNANCE.md",
     "CITATION.cff",
     "assets/junzi-seal.svg",
+    "website/package.json",
+    "website/package-lock.json",
+    "website/astro.config.mjs",
+    "website/src/pages/index.astro",
+    "website/src/styles/global.css",
+    ".github/workflows/pages.yml",
     "LICENSE",
     "NOTICE",
     "CONTRIBUTING.md",
@@ -130,6 +136,21 @@ governance = read("GOVERNANCE.md")
 for phrase in ["个人负责", "道之所向", "外部反馈"]:
     if phrase not in governance:
         fail(f"GOVERNANCE.md is missing governance concept: {phrase}")
+
+website = read("website/src/pages/index.astro")
+for phrase in ["道法势术器", "退回最近仍成立的节点", "广用其器", "fyapeng/junzi-skill"]:
+    if phrase not in website:
+        fail(f"website is missing core Junzi presentation: {phrase}")
+
+astro_config = read("website/astro.config.mjs")
+for phrase in ['site: "https://fyapeng.com"', 'base: "/junzi-skill"']:
+    if phrase not in astro_config:
+        fail(f"Astro Pages configuration is missing: {phrase}")
+
+pages_workflow = read(".github/workflows/pages.yml")
+for phrase in ["withastro/action@v6", "actions/deploy-pages@v5", "path: website"]:
+    if phrase not in pages_workflow:
+        fail(f"Pages workflow is missing: {phrase}")
 
 interface = read("agents/openai.yaml")
 for phrase in ["display_name:", "short_description:", "default_prompt:", "$junzi"]:
