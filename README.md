@@ -317,21 +317,60 @@
 
 ## 安装
 
-将整个仓库放入个人 Codex 技能目录。
+### 推荐：通过 `npx skills` 从 GitHub 安装
 
-### Windows
+无需全局安装 npm 包。以下命令从 GitHub 读取 Junzi，并复制到对应智能体的个人技能目录。
+
+**安装到 Codex：**
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --skill junzi -g -a codex --copy -y
+```
+
+**安装到 Claude Code：**
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --skill junzi -g -a claude-code --copy -y
+```
+
+**同时安装到 Codex 与 Claude Code：**
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --skill junzi -g -a codex -a claude-code --copy -y
+```
+
+移除 `-g` 即安装到当前项目。移除 `--copy -y` 可以进入交互模式，自行选择复制或符号链接。安装前可先查看仓库中可发现的技能：
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --list
+```
+
+`skills` 是独立的开放 Agent Skills 安装器，并非本项目自身的 npm 包。它默认收集匿名安装遥测；如需关闭，可在运行前设置 `DISABLE_TELEMETRY=1`。安装任何第三方技能前都应审阅其 `SKILL.md`、脚本和权限范围。
+
+### 手动安装
+
+也可以下载 GitHub 仓库 ZIP，或使用 Git 克隆，然后将整个仓库放入个人技能目录。
+
+#### Codex · Windows
 
 ```text
 %USERPROFILE%\.codex\skills\junzi
 ```
 
-### macOS / Linux
+#### Codex · macOS / Linux
 
 ```text
 ~/.codex/skills/junzi
 ```
 
-也可以使用已经配置的 `$CODEX_HOME/skills`。复制后，如果当前任务没有发现新技能，请开启一个新的 Codex 任务以刷新技能列表。
+#### Claude Code
+
+```text
+Windows: %USERPROFILE%\.claude\skills\junzi
+macOS / Linux: ~/.claude/skills/junzi
+```
+
+Codex 也可以使用已经配置的 `$CODEX_HOME/skills`。Claude Code 项目级安装位置是 `.claude/skills/junzi`。复制后若当前会话没有发现新技能，请重新开启任务或使用平台提供的技能刷新命令。
 
 技能核心目录必须保留为：
 
@@ -361,7 +400,7 @@ Use $junzi to help me preserve the long-term aim of this project while remaining
 请使用 $junzi 与我一起分析这个研究方向。不要盲从我的最新想法，也不要用规则限制探索；先理解真实问题，再主动检索、形成判断并推进到可检验的下一步。
 ```
 
-`agents/openai.yaml` 允许隐式调用；实际是否加载仍取决于 Codex 当前环境、任务语境和更高优先级规则。
+在 Codex 中显式调用 `$junzi`；在 Claude Code 中可以输入 `/junzi`，也可以让模型依据描述自动调用。`agents/openai.yaml` 是 Codex 界面元数据，Claude Code 会忽略它；实际是否加载仍取决于当前环境、任务语境和更高优先级规则。
 
 </details>
 

@@ -40,6 +40,36 @@ Instruments include conceptual, memory, measurement, computational, verification
 
 Junzi does not override system instructions, safety rules, permissions, or human responsibility for consequential decisions.
 
+## Installation
+
+The recommended method uses the open `skills` CLI to install directly from GitHub. No Junzi-specific npm package or global CLI installation is required.
+
+Codex:
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --skill junzi -g -a codex --copy -y
+```
+
+Claude Code:
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --skill junzi -g -a claude-code --copy -y
+```
+
+Both agents:
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --skill junzi -g -a codex -a claude-code --copy -y
+```
+
+Remove `-g` for project-local installation. To inspect the repository before installation:
+
+```powershell
+npx -y skills add fyapeng/junzi-skill --list
+```
+
+Manual installation remains supported. Copy the repository to `~/.codex/skills/junzi` for Codex or `~/.claude/skills/junzi` for Claude Code. On Windows, `~` resolves to `%USERPROFILE%`. The `skills` CLI is an independent installer and collects anonymous telemetry by default; set `DISABLE_TELEMETRY=1` to opt out.
+
 ## Documentation and status
 
 - [Chinese README](README.md)
