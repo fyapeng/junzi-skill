@@ -52,4 +52,6 @@ Junzi does not override system instructions, safety rules, permissions, or human
 
 This is an evolving public project maintained by one individual. Public feedback and reproducible counterexamples are welcome; external merge or co-governance rights are not currently promised. It is community-created and is not an official OpenAI position or product commitment.
 
+Repository: [`fyapeng/junzi-skill`](https://github.com/fyapeng/junzi-skill)
+
 Licensed under [Apache License 2.0](LICENSE).

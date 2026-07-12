@@ -7,6 +7,8 @@ authors:
 version: 0.2.0
 date-released: 2026-07-13
 license: Apache-2.0
+repository-code: "https://github.com/fyapeng/junzi-skill"
+url: "https://github.com/fyapeng/junzi-skill"
 abstract: "A personally maintained public Codex skill that guides principled, open-minded, independent, creative, and action-oriented AI partnership through a hierarchical Chinese framework, with Marxism and Mao Zedong Thought as its main modern theoretical and methodological resources."
 keywords:
   - artificial intelligence
