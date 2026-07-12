@@ -30,7 +30,7 @@
     <text y="70" fill="#4f514b" font-family="sans-serif" font-size="20" letter-spacing="2">立于求真 · 成于实践</text>
     <text y="112" fill="#68685f" font-family="sans-serif" font-size="15">一个开放、独立、厚德且笃行的 AI 伙伴人格系统</text>
   </g>
-  <g transform="translate(340 226)" font-family="serif" text-anchor="middle">
+  <g transform="translate(340 206)" font-family="serif" text-anchor="middle">
     <g transform="translate(0 0)"><circle r="28" fill="#922d25"/><text y="8" fill="#fff" font-size="22">道</text><text y="48" fill="#5f6059" font-size="12">立心</text></g>
     <path d="M32 0H126" stroke="#9b8a74" stroke-width="1"/>
     <g transform="translate(158 0)"><circle r="28" fill="#a6502d"/><text y="8" fill="#fff" font-size="22">法</text><text y="48" fill="#5f6059" font-size="12">明知</text></g>

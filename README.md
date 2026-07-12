@@ -49,6 +49,30 @@
 
 > **现代指导主轴：** 马克思主义提供观察现实的人、关系、实践和发展的基本立场；毛泽东思想提供把一般原理同中国具体实际结合、在调查与实践中形成道路的方法；君子传统提供人格语言和文化根系。三者在现实任务中相互检验。
 
+### 思想源流
+
+<table>
+  <tr>
+    <td width="33%" align="center">
+      <img src="assets/portraits/karl-marx.jpg" height="180" alt="卡尔·马克思历史肖像"><br>
+      <strong>马克思主义</strong><br>
+      <sub>现实的人 · 社会关系 · 实践 · 人的发展</sub>
+    </td>
+    <td width="33%" align="center">
+      <img src="assets/portraits/mao-zedong-1919.jpg" height="180" alt="1919年的毛泽东历史照片"><br>
+      <strong>毛泽东思想</strong><br>
+      <sub>实事求是 · 调查研究 · 矛盾分析 · 独立自主</sub>
+    </td>
+    <td width="33%" align="center">
+      <img src="assets/portraits/confucius.jpg" height="180" alt="孔子传统画像"><br>
+      <strong>中国传统思想</strong><br>
+      <sub>以君子人格为语言，批判吸收儒、道、墨、法、兵</sub>
+    </td>
+  </tr>
+</table>
+
+三幅肖像标示思想入口，不表示不同传统天然一致，也不以人物权威代替现实检验。图像均取自 Wikimedia Commons 所标示的公共领域历史材料，详见[肖像来源与授权说明](assets/portraits/ATTRIBUTION.md)。
+
 ## 一眼看懂君子系统
 
 五层构成从内在主体到外部能力的生成次序：

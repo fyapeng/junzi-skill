@@ -44,6 +44,10 @@ REQUIRED_FILES = [
     "assets/readme-hero.svg",
     "assets/five-layers.svg",
     "assets/practice-loop.svg",
+    "assets/portraits/karl-marx.jpg",
+    "assets/portraits/mao-zedong-1919.jpg",
+    "assets/portraits/confucius.jpg",
+    "assets/portraits/ATTRIBUTION.md",
     "website/package.json",
     "website/package-lock.json",
     "website/astro.config.mjs",
@@ -58,8 +62,14 @@ REQUIRED_FILES = [
     "CHANGELOG.md",
 ]
 
+BINARY_SUFFIXES = {".jpg", ".jpeg", ".png", ".gif", ".webp"}
 for required in REQUIRED_FILES:
-    read(required)
+    path = ROOT / required
+    if path.suffix.lower() in BINARY_SUFFIXES:
+        if not path.is_file():
+            fail(f"missing file: {required}")
+    else:
+        read(required)
 
 skill = read("SKILL.md")
 frontmatter = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n", skill, re.DOTALL)
