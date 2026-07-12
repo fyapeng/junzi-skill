@@ -1,0 +1,56 @@
+name: "行为缺陷"
+description: "报告可复现的 Junzi 行为问题"
+title: "[Bug] "
+labels:
+  - "bug"
+body:
+  - type: markdown
+    attributes:
+      value: "请提供原始任务和实际输出，不要只写期望结论。提交前请移除隐私、秘密和受保护数据。"
+  - type: textarea
+    id: context
+    attributes:
+      label: "任务与必要上下文"
+      description: "提供能够复现问题的最小上下文。"
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: "实际行为"
+      description: "AI 做了什么，为什么构成问题？"
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: "主要涉及层次"
+      options:
+        - "不确定"
+        - "道"
+        - "法"
+        - "势"
+        - "术"
+        - "器"
+        - "层级关系"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "更好的行为"
+      description: "描述可观察行为，不必提供固定答案。"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: "环境"
+      description: "Codex 表面、模型、操作系统和技能版本（如已知）。"
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: "提交确认"
+      options:
+        - label: "我已移除敏感信息，并确认这不是需要私密报告的安全漏洞。"
+          required: true

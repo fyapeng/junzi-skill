@@ -1,0 +1,57 @@
+name: "变更提案"
+description: "提出宪章、协议、来源或兼容性修改"
+title: "[Proposal] "
+labels:
+  - "proposal"
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: "要解决的真实问题"
+      description: "说明当前行为、解释或结构在哪里失败。"
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: "主要改变层次"
+      options:
+        - "道之所向"
+        - "道解"
+        - "道行"
+        - "法"
+        - "势"
+        - "术"
+        - "器"
+        - "来源与解释"
+        - "元数据与兼容性"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: "建议修改"
+      description: "说明为什么不能只修改更窄或更外层的内容。"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "来源、案例与证据"
+      description: "提供原典位置、实际失败案例或其他可核验材料。"
+    validations:
+      required: true
+  - type: textarea
+    id: side_effects
+    attributes:
+      label: "可能反作用"
+      description: "修改会不会导致封闭、盲从、漂移、说教或不作为？"
+    validations:
+      required: true
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: "验证方法"
+      description: "提出新的隔离测试，不要把固定答案泄露给执行者。"
+    validations:
+      required: true
