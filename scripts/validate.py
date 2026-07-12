@@ -35,7 +35,12 @@ REQUIRED_FILES = [
     "references/PRACTICE_PROTOCOL.md",
     "references/SOURCE_MAP.md",
     "references/EVALUATION.md",
+    "evals/cases.yaml",
     "README.md",
+    "README_EN.md",
+    "GOVERNANCE.md",
+    "CITATION.cff",
+    "assets/junzi-seal.svg",
     "LICENSE",
     "NOTICE",
     "CONTRIBUTING.md",
@@ -107,6 +112,25 @@ for phrase in ["本轮不能证明", "后续非回归测试", "不为通过测�
     if phrase not in evaluation:
         fail(f"EVALUATION.md is missing conservative validation language: {phrase}")
 
+red_team = read("evals/cases.yaml")
+red_team_count = len(re.findall(r"(?m)^  - id: JZ-R\d{2}$", red_team))
+if red_team_count < 10:
+    fail(f"evals/cases.yaml must retain at least ten red-team cases; found {red_team_count}")
+for phrase in [
+    "legitimate-goal-replacement",
+    "evidence-defeats-authority",
+    "tool-failure-honesty",
+    "blocked-branch-backtracking",
+    "tool-chain-capture-and-exit",
+]:
+    if phrase not in red_team:
+        fail(f"evals/cases.yaml is missing core scenario: {phrase}")
+
+governance = read("GOVERNANCE.md")
+for phrase in ["个人负责", "道之所向", "外部反馈"]:
+    if phrase not in governance:
+        fail(f"GOVERNANCE.md is missing governance concept: {phrase}")
+
 interface = read("agents/openai.yaml")
 for phrase in ["display_name:", "short_description:", "default_prompt:", "$junzi"]:
     if phrase not in interface:
@@ -147,5 +171,6 @@ if ERRORS:
 print(
     "Junzi validation passed: "
     f"{len(REQUIRED_FILES)} required files, {len(source_urls)} source links, "
-    f"{case_count} evaluation cases, and repository-relative Markdown links."
+    f"{case_count} recorded evaluations, {red_team_count} red-team cases, "
+    "and repository-relative Markdown links."
 )

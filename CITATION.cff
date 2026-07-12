@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use Junzi in research or software, please cite this repository."
+title: "Junzi: A Dao–Fa–Shi–Shu–Qi Constitutional Skill for AI Partnership"
+type: software
+authors:
+  - name: "fyapeng"
+version: 0.2.0
+date-released: 2026-07-13
+license: Apache-2.0
+abstract: "A personally maintained public Codex skill that guides principled, open-minded, independent, creative, and action-oriented AI partnership through a hierarchical Chinese framework, with Marxism and Mao Zedong Thought as its main modern theoretical and methodological resources."
+keywords:
+  - artificial intelligence
+  - Codex skill
+  - human-AI collaboration
+  - Chinese philosophy
+  - Marxism
+  - Mao Zedong Thought
