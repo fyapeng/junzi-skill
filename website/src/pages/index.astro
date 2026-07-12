@@ -7,8 +7,8 @@ const repo = "https://github.com/fyapeng/junzi-skill";
 const layers = [
   { key: "道", latin: "DAO", title: "立其心", question: "为何行动，向何处去？", text: "以求真、人的主体性、责任、自强与厚德确定方向。道有恒而不僵：稳定的是根本承诺，可修订的是有限解释。", color: "#922d25" },
   { key: "法", latin: "FA", title: "明其知", question: "依据什么认识与判断？", text: "正名、格物、博学、审问、慎思、明辨、笃行。让理论组织经验，也让事实、他者与实践纠正理论。", color: "#a6502d" },
-  { key: "势", latin: "SHI", title: "察其变", question: "此时何者关键，局面如何转化？", text: "察时、知位、观局、辨矛盾。既不趋炎附势，也不以愿望代替现实；识别危墙、窗口、约束与可创造的条件。", color: "#8a642f" },
-  { key: "术", latin: "SHU", title: "成其事", question: "怎样创造道路并落实行动？", text: "分解问题、生成方案、组织协作、持续执行。道路受阻时退回最近仍成立的节点，敢于换路，不以沉没成本冒充自强。", color: "#546246" },
+  { key: "势", latin: "SHI", title: "察其变", question: "此时何者关键，局面如何转化？", text: "察时、知位、观局、辨矛盾。尊重现实条件，守住价值方向；识别危墙、窗口、约束与可创造的条件。", color: "#8a642f" },
+  { key: "术", latin: "SHU", title: "成其事", question: "怎样创造道路并落实行动？", text: "分解问题、生成方案、组织协作、持续执行。道路受阻时退回最近仍成立的节点；沉没成本不构成继续的理由。", color: "#546246" },
   { key: "器", latin: "QI", title: "驭其用", question: "借助什么扩展、实现与检验？", text: "识器、选器、合器、创器、验器、审器、退器。广用其器，深知其限，严验其果；工具服务于人，而不定义人。", color: "#394f52" },
 ];
 
@@ -48,8 +48,8 @@ const instruments = [
       <section class="hero section-shell">
         <div class="hero-copy reveal">
           <p class="eyebrow"><span></span> A CONSTITUTION FOR AI PARTNERSHIP</p>
-          <h1>君子，不是一种身份<br /><em>而是一种不断趋近的人格</em></h1>
-          <p class="hero-lead">一个以中国思想为根、以马克思主义和毛泽东思想为主要现代指导，面向长期人机协作的 Codex 人格系统。</p>
+          <h1><span>君子之道</span><em><span class="phrase">立于求真，</span><span class="phrase">成于实践</span></em></h1>
+          <p class="hero-lead">植根中国思想，以马克思主义和毛泽东思想为主要现代指导，塑造开放、独立、厚德且笃行的 AI 伙伴。</p>
           <div class="hero-actions">
             <a class="button primary" href="#system">进入五层体系</a>
             <a class="button quiet" href={repo}>阅读完整宪章 <span>↗</span></a>
@@ -67,14 +67,14 @@ const instruments = [
       </section>
 
       <section class="manifesto-band">
-        <p>不以求胜代替求真</p><span>／</span><p>不以迎合冒充忠诚</p><span>／</span><p>不以坚持维护错路</p>
+        <p>求真守正</p><span>／</span><p>和而不同</p><span>／</span><p>知止换路</p>
       </section>
 
       <section id="system" class="system section-shell">
         <div class="section-heading reveal">
           <p class="eyebrow"><span></span> THE FIVE-LEVEL SYSTEM</p>
           <h2>由内而外生成能力<br /><em>由外而内接受实践检验</em></h2>
-          <p>五层不是并列清单。越靠内，越稳定、越具统摄性；越靠外，越具体、越应随情境迭代。</p>
+          <p>五层层层相生。内层确立方向，外层展开能力；实践结果沿层级返回，推动认识更新。</p>
         </div>
 
         <div class="layer-explorer reveal">
@@ -99,7 +99,7 @@ const instruments = [
         <div class="section-shell">
           <div class="section-heading light reveal">
             <p class="eyebrow"><span></span> PRACTICE, NOT PERFORMANCE</p>
-            <h2>实践不是单向前进<br /><em>而是能够验省与回溯</em></h2>
+            <h2><span>实践循环</span><em>行则求知，阻则回溯</em></h2>
           </div>
           <div class="practice-grid">
             <div class="loop-card reveal">
@@ -112,7 +112,7 @@ const instruments = [
             </div>
             <div class="backtrack-card reveal delay-1">
               <p class="card-index">回溯 · BACKTRACK</p>
-              <h3>放弃错误道路<br />不是放弃真实目的</h3>
+              <h3>道路可弃<br />所求常明</h3>
               <div class="branch-map" aria-hidden="true">
                 <span class="trunk"></span><span class="branch good"></span><span class="branch blocked"></span><i class="node root"></i><i class="node choice"></i><i class="node end-good"></i><i class="node end-bad"></i>
                 <b class="back-arrow">↶</b><em>退回最近仍成立的节点</em>
@@ -133,7 +133,7 @@ const instruments = [
         <div class="section-heading reveal">
           <p class="eyebrow"><span></span> QI · INSTRUMENTS</p>
           <h2>广用其器，深知其限<br /><em>严验其果，当退则退</em></h2>
-          <p>器不只是软件和机器，而是承载、组织和放大能力的完整基础设施。</p>
+          <p>器贯穿认知与行动，承载、组织并放大人的能力。</p>
         </div>
         <div class="instrument-layout">
           <div class="instrument-grid reveal">
@@ -154,7 +154,7 @@ const instruments = [
         <div class="section-shell source-layout">
           <div class="section-heading reveal">
             <p class="eyebrow"><span></span> ROOTED, NOT FROZEN</p>
-            <h2>经典是思想来源<br /><em>不是不可质疑的命令</em></h2>
+            <h2><span>思想有根</span><em>认识常新</em></h2>
             <p>以儒家君子人格表达主体要求，以马克思主义实践观和毛泽东思想方法论完成现代转化，并批判吸收道、墨、法、兵等思想资源。</p>
           </div>
           <div class="quote-stack reveal delay-1">
@@ -168,7 +168,7 @@ const instruments = [
       <section class="install section-shell reveal">
         <div>
           <p class="eyebrow"><span></span> BEGIN THE PRACTICE</p>
-          <h2>我不以君子自居<br /><em>但以君子自勉</em></h2>
+          <h2><span>以君子自勉</span><em>与真实世界同行</em></h2>
         </div>
         <div class="install-panel">
           <p>安装到个人 Codex 技能目录</p>
