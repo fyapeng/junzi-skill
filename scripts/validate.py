@@ -41,6 +41,9 @@ REQUIRED_FILES = [
     "GOVERNANCE.md",
     "CITATION.cff",
     "assets/junzi-seal.svg",
+    "assets/readme-hero.svg",
+    "assets/five-layers.svg",
+    "assets/practice-loop.svg",
     "website/package.json",
     "website/package-lock.json",
     "website/astro.config.mjs",
@@ -162,8 +165,9 @@ if "Apache License" not in license_text or "Version 2.0, January 2004" not in li
     fail("LICENSE is not recognizable as Apache License 2.0")
 
 link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+IGNORED_PARTS = {".git", "node_modules", "dist"}
 for markdown in ROOT.rglob("*.md"):
-    if ".git" in markdown.parts:
+    if IGNORED_PARTS.intersection(markdown.parts):
         continue
     text = markdown.read_text(encoding="utf-8")
     for target in link_pattern.findall(text):
@@ -176,7 +180,7 @@ for markdown in ROOT.rglob("*.md"):
 
 marker_pattern = re.compile(r"\[TODO|TODO:|待完成")
 for path in ROOT.rglob("*"):
-    if not path.is_file() or ".git" in path.parts:
+    if not path.is_file() or IGNORED_PARTS.intersection(path.parts):
         continue
     if path.suffix.lower() not in {".md", ".yaml", ".yml"}:
         continue

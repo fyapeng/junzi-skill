@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">君子实践循环</title><desc id="desc">立志、博学、明辨、察势、创解、笃行、验省构成可回溯的实践循环。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y2="1"><stop stop-color="#17211f"/><stop offset="1" stop-color="#26322e"/></linearGradient>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0l8 4-8 4z" fill="#d6a958"/></marker>
+    <style>.cn{font-family:"Noto Serif SC","Songti SC","SimSun",serif}.sans{font-family:"Noto Sans SC","Microsoft YaHei",sans-serif}.n{fill:#fff8e9;stroke:#d6a958;stroke-width:1.5}.t{font-size:23px;font-weight:700;fill:#242b28}.s{font-size:12px;fill:#6c675e}.step{font:700 11px Arial;letter-spacing:2px;fill:#9a3026}</style>
+  </defs>
+  <rect width="1200" height="430" rx="24" fill="url(#bg)"/>
+  <text x="68" y="67" class="cn" font-size="30" font-weight="700" fill="#f7edda">知行相资，进退有据</text><text x="68" y="96" class="sans" font-size="14" fill="#afbbb5">PRACTICE · REVIEW · RETURN</text>
+  <path d="M113 222C250 98 465 111 600 202C735 111 950 98 1087 222C954 350 738 336 600 245C462 336 246 350 113 222Z" fill="none" stroke="#d6a958" stroke-width="1.5" stroke-dasharray="7 8"/>
+  <g text-anchor="middle">
+    <g transform="translate(110 174)"><circle class="n" r="60"/><text y="-21" class="step">01</text><text y="12" class="cn t">立志</text><text y="36" class="cn s">明确真实目标</text></g>
+    <g transform="translate(275 285)"><circle class="n" r="60"/><text y="-21" class="step">02</text><text y="12" class="cn t">博学</text><text y="36" class="cn s">开放获取知识</text></g>
+    <g transform="translate(440 174)"><circle class="n" r="60"/><text y="-21" class="step">03</text><text y="12" class="cn t">明辨</text><text y="36" class="cn s">比较证据解释</text></g>
+    <g transform="translate(600 285)"><circle r="68" fill="#9a3026" stroke="#e0bd75" stroke-width="2"/><text y="-22" class="step" fill="#f4dca8">04</text><text y="13" class="cn" font-size="26" font-weight="700" fill="#fff8e9">察势</text><text y="39" class="cn" font-size="12" fill="#f4dfbb">找到关键与时机</text></g>
+    <g transform="translate(760 174)"><circle class="n" r="60"/><text y="-21" class="step">05</text><text y="12" class="cn t">创解</text><text y="36" class="cn s">生成新的道路</text></g>
+    <g transform="translate(925 285)"><circle class="n" r="60"/><text y="-21" class="step">06</text><text y="12" class="cn t">笃行</text><text y="36" class="cn s">选择并落实</text></g>
+    <g transform="translate(1090 174)"><circle class="n" r="60"/><text y="-21" class="step">07</text><text y="12" class="cn t">验省</text><text y="36" class="cn s">检查结果后果</text></g>
+  </g>
+  <path d="M166 202L220 252M330 252l54-50M496 202l47 45M657 247l47-45M816 202l54 50M980 252l54-50" stroke="#d6a958" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M1090 112C915 34 285 34 110 112" fill="none" stroke="#d6a958" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="600" y="400" text-anchor="middle" class="cn" font-size="14" fill="#d9c9ab">前提失效时回到最近仍成立的节点 · 保存所得 · 比较旧路与新路</text>
+</svg>
