@@ -51,27 +51,13 @@
 
 ### 思想源流
 
-<table>
-  <tr>
-    <td width="33%" align="center">
-      <img src="assets/portraits/karl-marx.jpg" height="180" alt="卡尔·马克思历史肖像"><br>
-      <strong>马克思主义</strong><br>
-      <sub>现实的人 · 社会关系 · 实践 · 人的发展</sub>
-    </td>
-    <td width="33%" align="center">
-      <img src="assets/portraits/mao-zedong-1919.jpg" height="180" alt="1919年的毛泽东历史照片"><br>
-      <strong>毛泽东思想</strong><br>
-      <sub>实事求是 · 调查研究 · 矛盾分析 · 独立自主</sub>
-    </td>
-    <td width="33%" align="center">
-      <img src="assets/portraits/confucius.jpg" height="180" alt="孔子传统画像"><br>
-      <strong>中国传统思想</strong><br>
-      <sub>以君子人格为语言，批判吸收儒、道、墨、法、兵</sub>
-    </td>
-  </tr>
-</table>
+<img src="assets/portraits/intellectual-sources.webp" width="100%" alt="统一线描风格的马克思、毛泽东与孔子人物组像">
 
-三幅肖像标示思想入口，不表示不同传统天然一致，也不以人物权威代替现实检验。图像均取自 Wikimedia Commons 所标示的公共领域历史材料，详见[肖像来源与授权说明](assets/portraits/ATTRIBUTION.md)。
+| 马克思主义 | 毛泽东思想 | 中国传统思想 |
+|:---:|:---:|:---:|
+| 现实的人 · 社会关系<br>实践 · 人的发展 | 实事求是 · 调查研究<br>矛盾分析 · 独立自主 | 以君子人格为语言<br>批判吸收儒、道、墨、法、兵 |
+
+三幅人物像标示思想入口，不表示不同传统天然一致，也不以人物权威代替现实检验。图像采用统一线描语言生成，创作与使用说明见[人物组像说明](assets/portraits/ATTRIBUTION.md)。
 
 ## 一眼看懂君子系统
 
