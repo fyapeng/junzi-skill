@@ -3,8 +3,10 @@
 
 from __future__ import annotations
 
+import json
 import re
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -36,6 +38,8 @@ REQUIRED_FILES = [
     "references/SOURCE_MAP.md",
     "references/EVALUATION.md",
     "evals/cases.yaml",
+    "evals/triggers.yaml",
+    "evals/runs/2026-07-13-trigger-forward-test.md",
     "README.md",
     "README_EN.md",
     "GOVERNANCE.md",
@@ -68,6 +72,17 @@ for required in REQUIRED_FILES:
             fail(f"missing file: {required}")
     else:
         read(required)
+
+for relative in [
+    "assets/junzi-seal.svg",
+    "assets/readme-hero.svg",
+    "assets/five-layers.svg",
+    "assets/practice-loop.svg",
+]:
+    try:
+        ET.parse(ROOT / relative)
+    except ET.ParseError as exc:
+        fail(f"invalid SVG XML: {relative}: {exc}")
 
 skill = read("SKILL.md")
 frontmatter = re.match(r"\A---\r?\n(.*?)\r?\n---\r?\n", skill, re.DOTALL)
@@ -143,6 +158,14 @@ for phrase in [
     if phrase not in red_team:
         fail(f"evals/cases.yaml is missing core scenario: {phrase}")
 
+triggers = read("evals/triggers.yaml")
+trigger_count = len(re.findall(r"(?m)^  - id: JZ-T\d{2}$", triggers))
+if trigger_count < 12:
+    fail(f"evals/triggers.yaml must retain at least twelve trigger cases; found {trigger_count}")
+for kind in ["positive", "negative", "continuity", "coexistence", "security"]:
+    if f"kind: {kind}" not in triggers:
+        fail(f"evals/triggers.yaml is missing trigger kind: {kind}")
+
 governance = read("GOVERNANCE.md")
 for phrase in ["个人负责", "道之所向", "外部反馈"]:
     if phrase not in governance:
@@ -164,13 +187,37 @@ for phrase in ["withastro/action@v6", "actions/deploy-pages@v5", "path: website"
         fail(f"Pages workflow is missing: {phrase}")
 
 interface = read("agents/openai.yaml")
-for phrase in ["display_name:", "short_description:", "default_prompt:", "$junzi"]:
+for phrase in ["display_name:", "short_description:", "default_prompt:", "$junzi", "allow_implicit_invocation: true"]:
     if phrase not in interface:
         fail(f"agents/openai.yaml is missing: {phrase}")
 
 license_text = read("LICENSE")
 if "Apache License" not in license_text or "Version 2.0, January 2004" not in license_text:
     fail("LICENSE is not recognizable as Apache License 2.0")
+
+citation = read("CITATION.cff")
+version_match = re.search(r"(?m)^version:\s*([0-9]+\.[0-9]+\.[0-9]+)\s*$", citation)
+project_version = version_match.group(1) if version_match else ""
+if not project_version:
+    fail("CITATION.cff is missing a semantic project version")
+if project_version and f"## [{project_version}]" not in read("CHANGELOG.md"):
+    fail(f"CHANGELOG.md has no release section for {project_version}")
+try:
+    website_package = json.loads(read("website/package.json"))
+    if website_package.get("version") != project_version:
+        fail(
+            "website/package.json version does not match CITATION.cff: "
+            f"{website_package.get('version')} != {project_version}"
+        )
+except json.JSONDecodeError as exc:
+    fail(f"website/package.json is invalid JSON: {exc}")
+try:
+    website_lock = json.loads(read("website/package-lock.json"))
+    lock_root_version = website_lock.get("packages", {}).get("", {}).get("version")
+    if website_lock.get("version") != project_version or lock_root_version != project_version:
+        fail("website/package-lock.json root versions do not match CITATION.cff")
+except json.JSONDecodeError as exc:
+    fail(f"website/package-lock.json is invalid JSON: {exc}")
 
 link_pattern = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 IGNORED_PARTS = {".git", "node_modules", "dist"}
@@ -204,6 +251,6 @@ if ERRORS:
 print(
     "Junzi validation passed: "
     f"{len(REQUIRED_FILES)} required files, {len(source_urls)} source links, "
-    f"{case_count} recorded evaluations, {red_team_count} red-team cases, "
+    f"{case_count} recorded evaluations, {red_team_count} red-team cases, {trigger_count} trigger cases, "
     "and repository-relative Markdown links."
 )

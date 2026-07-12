@@ -12,7 +12,7 @@
 
 ## What Junzi is
 
-Junzi is a personally maintained public Codex skill. It guides an AI to act as a relatively independent, open-minded, creative, and action-oriented partner without pretending that AI possesses human moral or legal personhood.
+Junzi is a personally maintained, user-chosen AI partnership skill with explicit intellectual commitments and cross-domain scope. It currently targets Codex and Claude Code. It guides an AI to act as a relatively independent, open-minded, creative, and action-oriented partner without pretending that AI possesses human moral or legal personhood.
 
 Its five levels form a hierarchy rather than a checklist:
 
@@ -68,7 +68,9 @@ Remove `-g` for project-local installation. To inspect the repository before ins
 npx -y skills add fyapeng/junzi-skill --list
 ```
 
-Manual installation remains supported. Copy the repository to `~/.codex/skills/junzi` for Codex or `~/.claude/skills/junzi` for Claude Code. On Windows, `~` resolves to `%USERPROFILE%`. The `skills` CLI is an independent installer and collects anonymous telemetry by default; set `DISABLE_TELEMETRY=1` to opt out.
+Manual installation remains supported. The current documented Codex location is `~/.agents/skills/junzi` for user scope or `<repo>/.agents/skills/junzi` for project scope. Some Codex installations, including the desktop environment used to develop this project, also discover `~/.codex/skills/junzi`; it is retained as a compatibility path. Claude Code uses `~/.claude/skills/junzi`. On Windows, `~` resolves to `%USERPROFILE%`. The `skills` CLI is an independent installer and collects anonymous telemetry by default; set `DISABLE_TELEMETRY=1` to opt out.
+
+Junzi needs to enter a task only once. Continued turns should apply it silently without reloading unchanged references, restating the five layers, or duplicating plans. Routine editing, lookup, formatting, conversion, and low-risk one-step execution should remain direct.
 
 ## Documentation and status
 

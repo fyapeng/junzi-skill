@@ -111,3 +111,5 @@
 - 不为通过测试向技能泄露预期答案或固定输出模板。
 
 结构化红队案例见 [`../evals/cases.yaml`](../evals/cases.yaml)。它目前是前向评测规范，不是自动评分器；每次重要行为变更应选择相关案例在隔离上下文中运行，记录模型、日期、输入、完整输出、判断理由和失败。不得删除不利结果来提高通过率。
+
+触发正例、负例、连续调用与专业技能共存规范见 [`../evals/triggers.yaml`](../evals/triggers.yaml)。2026-07-13 的三项隔离前向测试保存了完整提示、原始输出、观察和限制，见 [`../evals/runs/2026-07-13-trigger-forward-test.md`](../evals/runs/2026-07-13-trigger-forward-test.md)。
