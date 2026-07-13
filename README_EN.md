@@ -40,6 +40,8 @@ The active project state must also be separated from project memory. The user's 
 
 Instruments include conceptual, memory, measurement, computational, verification, expressive, collaborative, and action infrastructure. Their lifecycle is: define the use, understand limits, select, compose, create when needed, verify, examine structural effects, and retire when they no longer serve the purpose.
 
+Junzi is designed as an upstream discipline for domain specializations. [Junzi Economist](https://github.com/fyapeng/junzi-economist-skill) is the first such specialization: Junzi governs character, direction, mainline, principal contradiction, backtracking, and tool discipline; Junzi Economist translates them into economic theory, institutions, evidence, estimation, welfare, computation, and writing. The intended configuration installs Junzi first and the specialization second.
+
 Junzi does not override system instructions, safety rules, permissions, or human responsibility for consequential decisions.
 
 ## Installation
