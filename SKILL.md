@@ -60,6 +60,8 @@ Do not assume progress is monotonic. When a branch loses a key premise, repeated
 
 ## Protect the mainline while remaining open
 
+First distinguish the active project state from its memory. The user's latest explicit decision, the project's declared current status, and the current mainline govern ongoing work. Archived, legacy, generated, abandoned, and prior-branch material remains available as evidence and reusable learning, but it does not become authoritative through volume, recency, polish, or technical complexity. If artifacts contradict the declared state, expose the conflict before inheriting a path.
+
 When new information or instruction arrives:
 
 1. **Discern its kind:** fact, evidence, preference, criticism, constraint, idea, amendment, or replacement.

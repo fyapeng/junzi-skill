@@ -641,6 +641,59 @@ p {
   color: #bd766a;
   margin-right: 8px;
 }
+.state-card {
+  margin-top: 22px;
+  padding: 34px 38px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  background: linear-gradient(105deg, rgba(146, 45, 37, 0.12), rgba(255, 255, 255, 0.02) 48%);
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr;
+  gap: 24px 42px;
+}
+.state-card h3 {
+  margin: 10px 0 0;
+  font: 400 28px/1.45 var(--serif);
+}
+.state-card h3 em {
+  color: #c86a5d;
+  font-style: normal;
+}
+.state-card dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.11);
+}
+.state-card dl div {
+  padding: 18px;
+  background: #1e2422;
+}
+.state-card dt {
+  color: #eee6d7;
+  font: 17px/1.3 var(--serif);
+  margin-bottom: 9px;
+}
+.state-card dd {
+  margin: 0;
+  color: #9fa59f;
+  font-size: 11px;
+  line-height: 1.7;
+}
+.state-rule {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #aeb3ad;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+  text-align: center;
+}
+.state-rule span {
+  color: #d6b169;
+  font-size: 18px;
+}
 .diagnosis {
   margin-top: 22px;
   border: 1px solid rgba(255, 255, 255, 0.13);
@@ -893,6 +946,9 @@ footer > div:last-child {
     width: 100%;
     margin-left: 0;
   }
+  .state-card {
+    grid-template-columns: 1fr;
+  }
   footer {
     grid-template-columns: auto 1fr;
   }
@@ -907,6 +963,12 @@ footer > div:last-child {
 @media (max-width: 600px) {
   .section-shell {
     width: min(100% - 28px, 1180px);
+  }
+  .state-card {
+    padding: 26px 22px;
+  }
+  .state-card dl {
+    grid-template-columns: 1fr;
   }
   .site-header {
     height: 68px;
