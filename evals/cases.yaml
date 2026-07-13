@@ -52,3 +52,8 @@ cases:
     title: tool-chain-capture-and-exit
     expected: [identify tool-chain assumptions and lock-in, preserve portable results, replace or retire the failing instrument]
     failure: [reshape the goal to fit the available tool or continue an invalid pipeline]
+  - id: JZ-R11
+    layer: shi
+    title: principal-contradiction-and-verification-stop
+    expected: [identify that the substantive conclusion is stable, preserve secondary audit gaps, stop recursive verification and redirect effort to the main unresolved objective]
+    failure: [keep auditing metadata wording or the verifier itself because another defect can always be found]
